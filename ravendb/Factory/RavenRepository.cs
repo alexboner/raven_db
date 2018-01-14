@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Raven.Client;
 
 namespace ravendb
 {
     public class RavenRepository<T> : IRepository<T> where T : class
     {
-        private Raven.Client.Document.DocumentSession _context;
+        private IDocumentSession _context;
 
         protected IDocumentSession Context
         {
