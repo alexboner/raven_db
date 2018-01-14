@@ -18,6 +18,7 @@ namespace ravendb
 
         public PeopleSearch()
         {
+            
             AddMap<Company>(companies =>
                 from company in companies
                 select new Result
