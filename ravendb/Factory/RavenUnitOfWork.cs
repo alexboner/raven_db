@@ -30,8 +30,8 @@ namespace ravendb
                 Context.Dispose();
                 Context = null;
             }
-
             GC.SuppressFinalize(this);
+            GC.Collect(2, GCCollectionMode.Forced);
         }
 
         #endregion
