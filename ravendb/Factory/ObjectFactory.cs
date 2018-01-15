@@ -18,7 +18,7 @@ namespace ravendb
         {
             return new Container(x =>
             {
-                // default config
+                x.AddRegistry(new Registry());
             });
         }
     }

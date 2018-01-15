@@ -17,7 +17,6 @@ namespace ravendb
                 {
                     _context = GetCurrentUnitOfWork<RavenUnitOfWork>().Context;
                 }
-
                 return _context;
             }
         }
