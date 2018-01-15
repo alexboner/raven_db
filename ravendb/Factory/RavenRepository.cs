@@ -34,32 +34,32 @@ namespace ravendb
 
         public IEnumerable<T> Find(Func<T, bool> where)
         {
-            return this.Context.Query<T>().Where<T>(where);
+            return Context.Query<T>().Where<T>(where);
         }
 
         public T Single(Func<T, bool> where)
         {
-            return this.Context.Query<T>().SingleOrDefault<T>(where);
+            return Context.Query<T>().SingleOrDefault<T>(where);
         }
 
         public T First(Func<T, bool> where)
         {
-            return this.Context.Query<T>().First<T>(where);
+            return Context.Query<T>().First<T>(where);
         }
 
         public virtual void Delete(T entity)
         {
-            this.Context.Delete(entity);
+            Context.Delete(entity);
         }
 
         public virtual void Add(T entity)
         {
-            this.Context.Store(entity);
+            Context.Store(entity);
         }
 
         public void SaveChanges()
         {
-            this.Context.SaveChanges();
+            Context.SaveChanges();
         }
     }
 }
